@@ -1,0 +1,18 @@
+{
+  "name": "chai-hy-res",
+  "version": "0.1.0",
+  "description": "Chai plugin for testing hy-res instances",
+  "main": "index.js",
+  "scripts": {
+  },
+  "keywords": [
+    "chai",
+    "hy-res",
+    "hypermedia"
+  ],
+  "peerDependencies": {
+    "hy-res": "^0.0.11"
+  },
+  "author": "Pete Johanson",
+  "license": "MIT"
+}
