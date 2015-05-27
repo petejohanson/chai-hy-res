@@ -31,7 +31,7 @@ expect(res.$followOne('next')).to.be.an.unresolved.resource;
 ```
 
 For asserting resolved resource, it is often helpful to use the plugin in
-combination with (chai-as-promised)[http://chaijs.com/plugins/chai-as-promised]:
+combination with [chai-as-promised](http://chaijs.com/plugins/chai-as-promised):
 
 ```
 expect(res.$followOne('next').$promise).to.eventually.be.a.resolved.resource;
