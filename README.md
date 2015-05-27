@@ -37,3 +37,17 @@ combination with [chai-as-promised](http://chaijs.com/plugins/chai-as-promised):
 expect(res.$followOne('next').$promise).to.eventually.be.a.resolved.resource;
 ```
 
+### Link Assertions
+
+You can assert on the presence and properties of links in the resource as well:
+
+```javascript
+expect(res).to.have.link('next').with.property('href', '/posts/123');
+```
+
+Asserting on the absense of a link works as well:
+
+```javascript
+expect(res).to.not.have.link('prev');
+```
+
