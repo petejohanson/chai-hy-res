@@ -3,6 +3,10 @@
 var gulp = require('gulp'),
   lazypipe = require('lazypipe'),
   karma = require('gulp-karma'),
+  runSequence = require('run-sequence'),
+  bump = require('gulp-bump'),
+  tagVersion = require('gulp-tag-version'),
+  git = require('gulp-git'),
   jshint = require('gulp-jshint');
 
 function getJSHintPipe(rc) {
@@ -42,4 +46,30 @@ gulp.task('karma', function() {
   return karmaPipe('run');
 });
 
+gulp.task('bump', function() {
+  return gulp.src('package.json')
+    .pipe(bump({ type: gulp.env.type || 'patch' }))
+    .pipe(gulp.dest('./'));
+});
+
+gulp.task('bump-commit', function() {
+  var version = require('./package.json').version;
+  return gulp.src(['package.json'])
+    .pipe(git.commit('Release v' + version));
+});
+
+gulp.task('tag', function() {
+  return gulp.src('package.json')
+    .pipe(tagVersion());
+});
+
+gulp.task('release', function(cb) {
+  runSequence(
+    'jshint',
+    'bump',
+    'bump-commit',
+    'tag',
+    cb
+  );
+});
 gulp.task('default', ['jshint', 'karma']);
