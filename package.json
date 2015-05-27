@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "description": "Chai plugin for testing hy-res instances",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [
     "chai",
     "hy-res",
@@ -14,5 +13,11 @@
     "hy-res": "^0.0.11"
   },
   "author": "Pete Johanson",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-jshint": "^1.11.0",
+    "jshint-stylish": "^2.0.0",
+    "lazypipe": "^0.2.3"
+  }
 }
