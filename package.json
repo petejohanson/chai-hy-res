@@ -1,6 +1,6 @@
 {
   "name": "chai-hy-res",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Chai plugin for testing hy-res instances",
   "main": "index.js",
   "scripts": {},
