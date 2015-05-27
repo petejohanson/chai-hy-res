@@ -30,8 +30,11 @@
     "chai-as-promised": "^5.0.0",
     "es6-promise": "^2.1.1",
     "gulp": "^3.8.11",
+    "gulp-bump": "^0.3.1",
+    "gulp-git": "^1.2.4",
     "gulp-jshint": "^1.11.0",
     "gulp-karma": "0.0.4",
+    "gulp-tag-version": "^1.2.1",
     "hy-res": "0.0.11",
     "jshint-stylish": "^2.0.0",
     "karma": "^0.12.33",
@@ -45,6 +48,7 @@
     "lazypipe": "^0.2.3",
     "mocha": "^2.2.5",
     "node-libs-browser": "^0.5.2",
+    "run-sequence": "^1.1.0",
     "sinon": "^1.14.1",
     "webpack": "^1.9.10"
   }
