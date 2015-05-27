@@ -26,8 +26,7 @@ module.exports = function(chai, utils) {
 
     new Assertion(obj).to.have.property('$promise').not.null;
 
-    if(utils.flag(this,'chai-hy-res:unresolved')) {
-      new Assertion(obj).to.have.property('$resolved').be.false;
+    if(utils.flag(this,'chai-hy-res:unresolved')) { new Assertion(obj).to.have.property('$resolved').be.false;
       new Assertion(obj).to.have.property('$error').be.null;
     }
 
@@ -36,5 +35,18 @@ module.exports = function(chai, utils) {
       new Assertion(obj.$promise).to.eventually.have.property('$error').be.null;
       new Assertion(obj.$promise).to.eventually.eql(obj);
     }
+  });
+
+  utils.addMethod(Assertion.prototype, 'link', function(rel) {
+    var obj = this._obj;
+
+    var link = obj.$link(rel);
+
+    var linkAssertion = new Assertion(link);
+    // Transfer flags so a previous negation will work as expected.
+    utils.transferFlags(this, linkAssertion, false);
+    linkAssertion.to.exist;
+
+    utils.flag(this, 'object', link);
   });
 };
