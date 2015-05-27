@@ -2,8 +2,6 @@
 
 /*jshint expr: true*/
 
-//var HyRes = require('hy-res');
-
 module.exports = function(chai, utils) {
   var Assertion = chai.Assertion;
   Assertion.addProperty('resolved', function() {
@@ -18,11 +16,6 @@ module.exports = function(chai, utils) {
 
   Assertion.addProperty('resource', function() {
     var obj = this._obj;
-/*
-    var instanceAssertion = new chai.Assertion(this._obj);
-    utils.transferFlags(this, instanceAssertion, false);
-    instanceAssertion.to.be.instanceof(HyRes.Resource);
-*/
 
     new Assertion(obj).to.have.property('$promise').not.null;
 

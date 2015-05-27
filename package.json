@@ -14,7 +14,6 @@
     "url": "https://github.com/petejohanson/chai-hy-res.git"
   },
   "peerDependencies": {
-    "hy-res": "^0.0.11",
     "chai": "*"
   },
   "homepage": "https://github.com/petejohanson/chai-hy-res",
@@ -35,7 +34,6 @@
     "gulp-jshint": "^1.11.0",
     "gulp-karma": "0.0.4",
     "gulp-tag-version": "^1.2.1",
-    "hy-res": "0.0.11",
     "jshint-stylish": "^2.0.0",
     "karma": "^0.12.33",
     "karma-es5-shim": "0.0.4",
