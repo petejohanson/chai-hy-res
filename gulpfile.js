@@ -2,6 +2,7 @@
 
 var gulp = require('gulp'),
   lazypipe = require('lazypipe'),
+  karma = require('gulp-karma'),
   jshint = require('gulp-jshint');
 
 function getJSHintPipe(rc) {
@@ -23,4 +24,22 @@ gulp.task('jshint:gulpfile', function() {
     .pipe(getJSHintPipe()());
 });
 
-gulp.task('default', ['jshint']);
+function karmaPipe(action) {
+  return gulp.src('test/**/*.js')
+    .pipe(karma({
+      configFile: 'karma.conf.js',
+      action: action
+    })).on('error', function(err) {
+      throw err;
+    });
+}
+
+gulp.task('karma:watch', function() {
+  return karmaPipe('watch');
+});
+
+gulp.task('karma', function() {
+  return karmaPipe('run');
+});
+
+gulp.task('default', ['jshint', 'karma']);

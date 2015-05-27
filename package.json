@@ -14,7 +14,8 @@
     "url": "https://github.com/petejohanson/chai-hy-res.git"
   },
   "peerDependencies": {
-    "hy-res": "^0.0.11"
+    "hy-res": "^0.0.11",
+    "chai": "*"
   },
   "homepage": "https://github.com/petejohanson/chai-hy-res",
   "bugs": "https://github.com/petejohanson/chai-hy-res/issues",
@@ -25,9 +26,24 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "axios": "^0.5.4",
+    "chai-as-promised": "^5.0.0",
+    "es6-promise": "^2.1.1",
     "gulp": "^3.8.11",
     "gulp-jshint": "^1.11.0",
+    "gulp-karma": "0.0.4",
+    "hy-res": "0.0.11",
     "jshint-stylish": "^2.0.0",
-    "lazypipe": "^0.2.3"
+    "karma": "^0.12.33",
+    "karma-es5-shim": "0.0.4",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-mocha": "^0.1.10",
+    "karma-mocha-reporter": "^1.0.2",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-webpack": "^1.5.1",
+    "lazypipe": "^0.2.3",
+    "mocha": "^2.2.5",
+    "node-libs-browser": "^0.5.2",
+    "webpack": "^1.9.10"
   }
 }
