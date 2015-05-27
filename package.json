@@ -9,10 +9,20 @@
     "hy-res",
     "hypermedia"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/petejohanson/chai-hy-res.git"
+  },
   "peerDependencies": {
     "hy-res": "^0.0.11"
   },
-  "author": "Pete Johanson",
+  "homepage": "https://github.com/petejohanson/chai-hy-res",
+  "bugs": "https://github.com/petejohanson/chai-hy-res/issues",
+  "author": {
+    "name": "Pete Johanson",
+    "email": "peter@peterjohanson.com",
+    "url": "https://github.com/petejohanson"
+  },
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.8.11",
